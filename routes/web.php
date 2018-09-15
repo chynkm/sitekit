@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Auth::routes();
+
+Route::get('/', 'HomeController@index')->name('home');
+
+Route::get('ping', ['as' => 'ping.index', 'uses' => 'PingController@index']);
+Route::post('ping', ['as' => 'ping.ping', 'uses' => 'PingController@ping']);
