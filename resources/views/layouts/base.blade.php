@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>{{ config('app.name', 'Laravel') }}@if($title) - {{ $title }} @endif</title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     </head>
@@ -22,9 +21,8 @@
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="{{ route('ping.index') }}">Ping</a></li>
-                        <li><a href="https://themes.gohugo.io/theme/minimal/post/">Posts</a></li>
-                        <li><a href="https://themes.gohugo.io/theme/minimal/project/">Projects</a></li>
+                        <li><a href="{{ route('ping.ping') }}">Ping</a></li>
+                        <li><a href="{{ route('port.check') }}">Port check</a></li>
                     </ul>
                 </div>
             </div>

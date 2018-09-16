@@ -15,5 +15,8 @@
 
 Route::get('/', 'HomeController@index')->name('home');
 
-Route::get('ping', ['as' => 'ping.index', 'uses' => 'PingController@index']);
-Route::post('ping', ['as' => 'ping.ping', 'uses' => 'PingController@ping']);
+Route::get('ping', ['as' => 'ping.ping', 'uses' => 'PingController@ping']);
+Route::post('ping', ['as' => 'ping.pingHost', 'uses' => 'PingController@pingHost']);
+
+Route::get('port-check', ['as' => 'port.check', 'uses' => 'PortCheckController@check']);
+Route::post('port-check', ['as' => 'port.portCheck', 'uses' => 'PortCheckController@checkPort']);

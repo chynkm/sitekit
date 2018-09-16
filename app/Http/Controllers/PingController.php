@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Ping;
-use Symfony\Component\HttpFoundation\StreamedResponse;
 
 class PingController extends Controller
 {
@@ -13,10 +12,10 @@ class PingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function ping()
     {
         $title = 'PING';
-        return view('ping.index', compact('title'));
+        return view('ping.ping', compact('title'));
     }
 
     protected function removeBrowserPrefix($url) {
@@ -33,7 +32,7 @@ class PingController extends Controller
         return $url;
     }
 
-    public function ping(Request $request)
+    public function pingHost(Request $request)
     {
         $host = $this->removeBrowserPrefix($request->host);
         $proc = popen(config('env.ping_path')." -c 4 {$host}", 'r');
