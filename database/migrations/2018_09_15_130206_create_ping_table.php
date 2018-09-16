@@ -15,6 +15,7 @@ class CreatePingTable extends Migration
     {
         Schema::create('pings', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('ip_address', 40);
             $table->string('host');
             $table->enum('protocol', ['ipv4', 'ipv6']);
             $table->text('output')->nullable();

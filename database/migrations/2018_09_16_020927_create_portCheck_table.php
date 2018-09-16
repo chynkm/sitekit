@@ -15,6 +15,7 @@ class CreatePortCheckTable extends Migration
     {
         Schema::create('port_checks', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('ip_address', 40);
             $table->string('host');
             $table->integer('port');
             $table->text('output', ['open', 'closed']);

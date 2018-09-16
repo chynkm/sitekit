@@ -36,6 +36,7 @@ class PortCheckController extends Controller
         }
 
         PortCheck::create([
+            'ip_address' => $request->server('REMOTE_ADDR'),
             'host' => $host,
             'port' => $port,
             'output' => $dbOutput,

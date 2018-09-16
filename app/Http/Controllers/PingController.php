@@ -50,6 +50,7 @@ class PingController extends Controller
         }
 
         Ping::create([
+            'ip_address' => $request->server('REMOTE_ADDR'),
             'host' => $host,
             'protocol' => 'ipv4',
             'output' => $output,

@@ -12,6 +12,6 @@ class Ping extends Model
      * @var array
      */
     protected $fillable = [
-        'host', 'protocol', 'output'
+        'ip_address', 'host', 'protocol', 'output'
     ];
 }

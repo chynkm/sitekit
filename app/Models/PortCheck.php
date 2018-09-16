@@ -12,6 +12,6 @@ class PortCheck extends Model
      * @var array
      */
     protected $fillable = [
-        'host', 'port', 'output'
+        'ip_address', 'host', 'port', 'output'
     ];
 }
